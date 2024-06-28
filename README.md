@@ -27,7 +27,8 @@ The goal of this project is to clean a sample dataset of layoffs by performing t
 
 - Open MySQL Workbench or your preferred MySQL client.
 - Create the layoffs table to match the structure of layoffs.csv:
-SQL : 
+SQL :
+
 CREATE TABLE layoffs (
     company VARCHAR(255),
     location VARCHAR(255),
@@ -41,7 +42,8 @@ CREATE TABLE layoffs (
 );
 
 - Load the CSV data into the layoffs table:
-SQL : 
+SQL :
+
 LOAD DATA INFILE '/path/to/layoffs.csv'
 INTO TABLE layoffs
 FIELDS TERMINATED BY ','
