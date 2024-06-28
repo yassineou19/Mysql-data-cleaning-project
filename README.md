@@ -27,28 +27,28 @@ The goal of this project is to clean a sample dataset of layoffs by performing t
 
 - Open MySQL Workbench or your preferred MySQL client.
 - Create the layoffs table to match the structure of layoffs.csv:
-SQL :
-
-CREATE TABLE layoffs (
-    company VARCHAR(255),
-    location VARCHAR(255),
-    industry VARCHAR(255),
-    total_laid_off INT,
-    percentage_laid_off FLOAT,
-    date VARCHAR(255),
-    stage VARCHAR(255),
-    country VARCHAR(255),
-    funds_raised_millions FLOAT
-);
+```SQL
+   CREATE TABLE layoffs (
+       company VARCHAR(255),
+       location VARCHAR(255),
+       industry VARCHAR(255),
+       total_laid_off INT,
+       percentage_laid_off FLOAT,
+       date VARCHAR(255),
+       stage VARCHAR(255),
+       country VARCHAR(255),
+       funds_raised_millions FLOAT
+   );
+```
 
 - Load the CSV data into the layoffs table:
-SQL :
-
+```SQL
 LOAD DATA INFILE '/path/to/layoffs.csv'
 INTO TABLE layoffs
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
+```
 
 3. **Run the Data Cleaning Script:**
 
@@ -57,8 +57,8 @@ IGNORE 1 ROWS;
 4. **Verify the Results:**
 
 - Query the layoffs_staging_no_dup table to see the cleaned data:
-SQL :
+```SQL
 SELECT * FROM layoffs_staging_no_dup;
-
+```
 
 
